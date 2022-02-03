@@ -43,8 +43,8 @@ class RendererAdapter : RecyclerView.Adapter<RendererViewHolder>() {
 
     fun addItem(item: Any, position: Int = -1) {
         val addPosition = if (position == -1) items.size else position
-        items.add(position, wrapItem(item))
-        notifyItemInserted(position)
+        items.add(addPosition, wrapItem(item))
+        notifyItemInserted(addPosition)
     }
 
     fun removeItem(index: Int) {
